@@ -8,8 +8,6 @@ const options = {
 var btnGetlink = getInputVal("btnGetLink");
 
 
-
-
 document.getElementById('getFormTiktok').addEventListener('submit', submitFormTiktok);
 var subLink = getInputVal("sucGetLink");
 
@@ -47,8 +45,8 @@ function submitFormTiktok(e) {
 
                     let tempUrl = URL.createObjectURL(file);
                     var htmlItem = `
-                <div class="product-item text-center">
-                    <iframe width="560" height="315" src="${response.data.play}"> 
+                <div class="product-item text-center col-12">
+                    <iframe width="300" height="315" src="${response.data.play}"> 
                 </iframe> 
                 </div>
                 <div class="product-item text-center">
