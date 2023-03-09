@@ -18,7 +18,8 @@ function submitFormTiktok(e) {
     e.preventDefault();
     var inputTiktok = getInputVal("link-tiktok");
 
-    var substring = "www.tiktok.com";
+    var substring = "tiktok.com";
+ 
     if (!inputTiktok.value.includes(substring)) {
         var htmlItem = `
             <div class="product-item text-center">
