@@ -2,10 +2,13 @@ const options = {
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': '9602695c1dmsh9ff64eec51027cep1f1514jsn6be0f91ba589',
-        'X-RapidAPI-Host': 'tiktok-video-no-watermark2.p.rapidapi.com'
+        'X-RapidAPI-Host': 'tiktok-download-without-watermark.p.rapidapi.com'
     }
 };
 var btnGetlink = getInputVal("btnGetLink");
+
+
+
 
 
 document.getElementById('getFormTiktok').addEventListener('submit', submitFormTiktok);
@@ -32,11 +35,12 @@ function submitFormTiktok(e) {
     }
 
     var encodedUrlTiktok = encodeURIComponent(inputTiktok.value);
-    fetch(`https://tiktok-video-no-watermark2.p.rapidapi.com/?url=${encodedUrlTiktok}`, options)
+    fetch(`https://tiktok-download-without-watermark.p.rapidapi.com/analysis?url=${encodedUrlTiktok}`, options)
         .then((response) => {
             return response.json();
         })
         .then((response) => {
+            console.log(response)
             fetch(response.data.play)
 
                 .then(res => res.blob())
