@@ -32,7 +32,7 @@ function submitFormTiktok(e) {
 
     var htmlItem = `
                 <div class="product-item text-center col-12">
-                    <img style ="width: 60%;" src="https://freight.cargo.site/t/original/i/2bb9de101433fb9aa7d20c6089ed57a5b0e9058f0383da72f538e9db50bd24c9/Easter_Gif.gif"> 
+                    <img style ="width: 30%;" src="https://freight.cargo.site/t/original/i/2bb9de101433fb9aa7d20c6089ed57a5b0e9058f0383da72f538e9db50bd24c9/Easter_Gif.gif"> 
                 </div>
                 <div class="product-item text-center">
                     <a id="clickID" href="https://api.douyin.wtf/download?url=${inputTiktok.value}&prefix=true&watermark=false" download="My Movie">Download Video</a>
