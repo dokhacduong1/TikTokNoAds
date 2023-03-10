@@ -43,10 +43,13 @@ function submitFormTiktok(e) {
             console.log(response)
             fetch(response.data.play)
 
-                .then(res => res.blob())
+                .then((res) => {
+                    console.log(res)
+                    return res.blob();
+                })
 
                 .then(file => {
-
+                    console.log(file);
                     let tempUrl = URL.createObjectURL(file);
                     var htmlItem = `
                 <div class="product-item text-center col-12">

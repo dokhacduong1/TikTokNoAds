@@ -4,6 +4,7 @@ var btnGetlink = getInputVal("btnGetLink");
 
 
 
+
 document.getElementById('getFormTiktok').addEventListener('submit', submitFormTiktok);
 var subLink = getInputVal("sucGetLink");
 
@@ -31,8 +32,7 @@ function submitFormTiktok(e) {
 
     var htmlItem = `
                 <div class="product-item text-center col-12">
-                    <iframe width="300" height="315" src="https://i0.wp.com/www.printmag.com/wp-content/uploads/2021/02/4cbe8d_f1ed2800a49649848102c68fc5a66e53mv2.gif?fit=476%2C280&ssl=1"> 
-                </iframe> 
+                    <img style ="width: 60%;" src="https://freight.cargo.site/t/original/i/2bb9de101433fb9aa7d20c6089ed57a5b0e9058f0383da72f538e9db50bd24c9/Easter_Gif.gif"> 
                 </div>
                 <div class="product-item text-center">
                     <a id="clickID" href="https://api.douyin.wtf/download?url=${inputTiktok.value}&prefix=true&watermark=false" download="My Movie">Download Video</a>
