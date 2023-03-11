@@ -36,16 +36,14 @@ function submitFormTiktok(e) {
             return response.json();
         })
         .then((response) => {
-            console.log(response)
             fetch(response.video_data.nwm_video_url_HQ)
 
                 .then((res) => {
-                    console.log(res)
+                  
                     return res.blob();
                 })
 
-                .then(file => {
-                    console.log(file);
+                .then(file => {                 
                     let tempUrl = URL.createObjectURL(file);
                     var htmlItem = `
                 <div class="product-item text-center col-12">
