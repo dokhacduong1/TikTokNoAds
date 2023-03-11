@@ -1,16 +1,13 @@
 const options = {
     method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '9602695c1dmsh9ff64eec51027cep1f1514jsn6be0f91ba589',
-        'X-RapidAPI-Host': 'tiktok-download-without-watermark.p.rapidapi.com'
-    }
+  
 };
 var btnGetlink = getInputVal("btnGetLink");
 
 
 
 
-
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 document.getElementById('getFormTiktok').addEventListener('submit', submitFormTiktok);
 var subLink = getInputVal("sucGetLink");
 
@@ -33,15 +30,14 @@ function submitFormTiktok(e) {
         subLink.innerHTML = htmlItem;
         return;
     }
-
-    var encodedUrlTiktok = encodeURIComponent(inputTiktok.value);
-    fetch(`https://tiktok-download-without-watermark.p.rapidapi.com/analysis?url=${encodedUrlTiktok}`, options)
+    const targetUrl = `https://api.douyin.wtf/api?url=${inputTiktok.value}&minimal=false`;
+    fetch(proxyUrl+ targetUrl, options)
         .then((response) => {
             return response.json();
         })
         .then((response) => {
             console.log(response)
-            fetch(response.data.play)
+            fetch(response.video_data.nwm_video_url_HQ)
 
                 .then((res) => {
                     console.log(res)
@@ -53,7 +49,7 @@ function submitFormTiktok(e) {
                     let tempUrl = URL.createObjectURL(file);
                     var htmlItem = `
                 <div class="product-item text-center col-12">
-                    <iframe width="300" height="315" src="${response.data.play}"> 
+                    <iframe width="300" height="315" src="${response.video_data.nwm_video_url_HQ}"> 
                 </iframe> 
                 </div>
                 <div class="product-item text-center">
